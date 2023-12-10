@@ -1,0 +1,102 @@
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a21232;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #20615b;
+    color: #fff;
+    padding: 1px 10px;
+    text-align: center; 
+}
+
+header .logo {
+    font-size: 28px;
+    margin-bottom: 10px; /* Add some space below the company name */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 0;
+    flex-grow: 1; /* Allow the main content to grow and take remaining space */
+}
+
+.hero {
+    background-image: url('background1.jpg'); 
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #1a1831;
+    position: relative; /* Add relative positioning to the hero section */
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Add border-radius for the box */
+    margin-top: 40px; /* Add top margin to separate it from the image */
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px; /* Add top margin to the button */
+}
+
+footer {
+    background-color:#20615b ;
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+}
+
+footer p {
+    margin: 0; /* Remove any default margin on the paragraph */
+}
+
+/* Customize the color of text in the hero section */
+.hero p {
+    color: black;
+}

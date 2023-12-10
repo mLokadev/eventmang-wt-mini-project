@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - D Decors N Events</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nameInput = document.getElementById('name');
+            var phoneInput = document.getElementById('phone');
+
+            nameInput.addEventListener('input', function () {
+                this.value = this.value.toUpperCase();
+            });
+
+            phoneInput.addEventListener('input', function () {
+                var phoneNumber = this.value.replace(/\D/g, ''); // Remove non-numeric characters
+                if (phoneNumber.length > 10) {
+                    alert('Phone number should not exceed 10 digits.');
+                    this.value = phoneNumber.slice(0, 10); // Truncate to 10 digits
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">D Decors N Events</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Register Here</h2>
+
+                    
+
+                    <form action="process.php" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="date">Date of Event:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="event">Name of the Event:</label>
+                        <select id="event" name="event" required>
+                            <option value="" disabled selected>Select an event</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                        </select>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2023 D Decors N Events</p>
+        </div>
+    </footer>
+</body>
+</html>
